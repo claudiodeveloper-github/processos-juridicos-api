@@ -16,7 +16,7 @@ O projeto segue o padrão de camadas para garantir a separação de responsabili
 - `Repository`: Interface de acesso ao banco de dados.
 - `Model`: Entidades do domínio.
 
-## ⚙️ Como executar localmente
+##  Como executar localmente
 1. Tenha o Java 21+ e o PostgreSQL instalados.
 2. Crie um banco de dados chamado `processos_db`.
 3. Configure as variáveis de ambiente na sua IDE:
