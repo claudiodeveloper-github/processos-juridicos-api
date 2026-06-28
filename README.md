@@ -9,12 +9,19 @@ Projeto desenvolvido como parte de estudos de back-end com Java e Spring Boot, f
 - **PostgreSQL**
 - **Spring Validation**
 
-##  Arquitetura
-O projeto segue o padrão de camadas para garantir a separação de responsabilidades:
-- `Controller`: Porta de entrada da API.
-- `Service`: Regras de negócio e orquestração.
-- `Repository`: Interface de acesso ao banco de dados.
-- `Model`: Entidades do domínio.
+##  Arquitetura do Projeto
+
+O projeto está estruturado em camadas para garantir alta coesão e baixo acoplamento:
+
+| Camada | Responsabilidade |
+| :--- | :--- |
+| **Controller** | Recebe as requisições HTTP, valida os dados e define o formato da resposta. |
+| **Service** | Centraliza as regras de negócio e validações complexas. |
+| **Repository** | Camada de abstração que fala diretamente com o Banco de Dados (JPA). |
+| **Model** | Define a estrutura dos dados (Entidades) que representam o domínio do negócio. |
+
+**Fluxo da Requisição:**
+`Client (Postman)` -> `Controller` -> `Service` -> `Repository` -> `PostgreSQL`
 
 ##  Como executar localmente
 1. Tenha o Java 21+ e o PostgreSQL instalados.
